@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 
+import './my_widget.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -26,76 +28,17 @@ class MyApp extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const DecoratedBox(
-                  decoration: BoxDecoration(
-                    color: Colors.red,
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.all(10),
-                    child: Text('Hello World'),
-                  ),
-                ),
-                const SizedBox(height: 20),
+                const MyWidget("Eu", Colors.blue, 20, 20),
+                const MyWidget("Amo", Colors.red, 10, 9),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const DecoratedBox(
-                      decoration: BoxDecoration(
-                        color: Colors.yellow,
-                        borderRadius: BorderRadius.all(Radius.circular(10)),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.all(10),
-                        child: Text('Hello'),
-                      ),
-                    ),
-                    const SizedBox(width: 20),
-                    const DecoratedBox(
-                      decoration: BoxDecoration(
-                        color: Colors.blue,
-                        borderRadius: BorderRadius.all(Radius.circular(10)),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.all(10),
-                        child: Text('World'),
-                      ),
-                    ),
-                    SizedBox(width: 20),
-                    const DecoratedBox(
-                      decoration: BoxDecoration(
-                        color: Colors.green,
-                        borderRadius: BorderRadius.all(Radius.circular(10)),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.all(10),
-                        child: Text('from'),
-                      ),
-                    ),
-                    const SizedBox(width: 20),
-                    const DecoratedBox(
-                      decoration: BoxDecoration(
-                        color: Colors.pink,
-                        borderRadius: BorderRadius.all(Radius.circular(10)),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.all(10),
-                        child: Text('Hell'),
-                      ),
-                    ),
+                    const MyWidget("a", Colors.purple, 30, 10),
+                    const MyWidget("aula", Colors.green, 30, 10),
+                    const MyWidget("da", Colors.indigo, 10, 5)
                   ],
                 ),
-                const SizedBox(height: 20),
-                const DecoratedBox(
-                  decoration: BoxDecoration(
-                    color: Colors.purple,
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.all(10),
-                    child: Text('Matioli', style: TextStyle(color: Colors.white)),
-                  ),
-                ),
+                const MyWidget("Tânia", Colors.yellow, 20, 10),
               ],
           )
         ),
